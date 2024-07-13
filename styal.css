@@ -1,0 +1,392 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  position: relative;
+  overflow: hidden;
+}
+
+canvas {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9;
+}
+
+/* Navbar */
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 3%;
+  border-radius: 13px;
+  height: 12vh;
+  width: 45vw;
+  background-color: #f3f1ef;
+  backdrop-filter: 10px;
+  padding: 0px 5px;
+  padding-left: 23px;
+}
+
+#nav > img {
+  width: 10%;
+}
+
+#nav > button {
+  padding: 7px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f4c05f;
+  font-weight: 550;
+  height: 45px;
+}
+
+#center-nav > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+}
+
+/* page  */
+
+#page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#page > h1 {
+  font-size: 100px;
+  position: absolute;
+  text-align: center;
+  font-weight: 600;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Corrected transform syntax */
+  color: #131313;
+}
+#page > h4 {
+  font-size: 35px;
+  position: absolute;
+  text-align: center;
+  font-weight: 450;
+  z-index: 99;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Corrected transform syntax */
+  color: #121718;
+}
+
+/* page 1 */
+
+#page1 {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e4e0dd;
+  position: relative;
+}
+
+#page1 > h1 {
+  font-size: 107px;
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  z-index: 99;
+  top: 25%;
+  left: 32%;
+  transform: translate(-50%-50%);
+  color: #131313;
+}
+#page1 > h4 {
+  font-size: 30px;
+  position: absolute;
+  text-align: center;
+  font-weight: 450;
+  z-index: 99;
+  top:46%;
+  left: 28%;
+  transform: translate(-50%-50%);
+  color: #121718;
+  white-space: nowrap;
+}
+
+/* page 2 */
+
+#page2 {
+  position: relative;
+  background-color: transparent;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* page 3 */
+
+#page3 {
+  position: relative;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+}
+
+/* page 4  */
+
+#page4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: transparent;
+  text-align: center;
+  background-color: #e4e0dd;
+}
+
+#page4 > h1 {
+  font-weight: 600;
+  font-size: 75px;
+  color: #131313;
+}
+
+#page4 > h4 {
+  font-weight: 450;
+  font-size: 25px;
+  color: #121718;
+}
+
+/* page 5   */
+
+#page5 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+}
+
+#center-page5 {
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 13%;
+  transform: translate(-50 -50%);
+  height: 70%;
+  width: 75%;
+  border-radius: 15px;
+  background-color: #f6f3ef;
+}
+
+#left-page5 {
+  height: 100%;
+  width: 50%;
+}
+
+#left-page5 > svg {
+  scale: 0.7;
+}
+
+#right-page5 {
+  display: flex;
+  gap: 30px;
+  padding-left: 60px;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+}
+
+#right-page5 > h1 {
+  font-weight: 600;
+}
+
+#right-page5 > h4 {
+  font-weight: 450;
+  width: 70%;
+}
+
+#right-page5 > button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+}
+
+/* page 6  */
+#page6 {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-page6 {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding-left: 16vw;
+}
+
+.left-page6 > h1 {
+  font-size: 2.8vw;
+  font-weight: 600;
+}
+
+.left-page6 > h4 {
+  margin-top: 20px;
+  font-weight: 450;
+  font-size: 20px;
+  width: 27vw;
+}
+
+.right-page6 {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+
+.right-page6 > video {
+  position: absolute;
+  transform: translate(-50 -50);
+  top: 25%;
+  left: 20%;
+  height: 60%;
+  width: 60%;
+  padding-right: 150px;
+  scale: 240%;
+}
+
+/* page 7 */
+
+#page7 {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-page7 {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding-left: 16vw;
+}
+
+.left-page7 > h1 {
+  font-size: 2.8vw;
+  font-weight: 600;
+}
+#heading {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 15px;
+  font-weight: 300px;
+}
+#heading1 {
+  margin-left: 30vh;
+  margin-top: 90px;
+  font-size: 50px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#heading2 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 80px;
+}
+.left-page7 > h4 {
+  margin-top: 20px;
+  font-weight: 450px;
+  font-size: 20px;
+  width: 27vw;
+}
+
+.right-page7 {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+
+.right-page7 > video {
+  position: absolute;
+  transform: translate(-50 -50);
+  top: 25%;
+  left: 33%;
+  height: 60%;
+  width: 50%;
+  /* padding-right: 170px; */
+  scale: 230%;
+}
+
+/* page 8 */
+
+#page8 {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-page8 {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding-left: 10vw;
+}
+
+.left-page8 > h1 {
+  margin-left: 100px;
+  font-size: 2.8vw;
+  font-weight: 600;
+}
+
+.left-page8 > h4 {
+  margin-left: 100px;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 470;
+  width: 70%;
+}
+
+.right-page8 {
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+
+.right-page8 > img {
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 70%;
+  width: 70%;
+}
